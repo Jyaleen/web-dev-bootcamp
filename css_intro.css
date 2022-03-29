@@ -1,0 +1,14 @@
+h2 {
+    color: #1bace6;
+    background-color: plum;
+}
+
+button {
+    color: magenta;
+    background-color: rgb(89, 151, 87);
+}
+
+p {
+    color: olive;
+    background: orange; /*background is more powerful than background-color (background-color will only change the color, but background can change anything)*/
+}

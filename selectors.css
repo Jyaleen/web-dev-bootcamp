@@ -1,0 +1,111 @@
+body {
+    background-color: #8ecae6;
+}
+
+button {
+    font-size: 20px;
+    background-color: #219ebc;
+}
+
+h1, h2 {
+    color: yellow;
+}
+
+h1, h2 {
+    color: #023047;
+}
+
+/* #signup and #login are id selectors; signup and login are ids in the html file */
+#signup {
+    background-color: #ffb703;
+    color: #023047;
+}
+
+span {
+    color: #fb8500;
+}
+
+/* .tag is a class selector; whereas ids only pertain to one element, many elements can be within one class -- you could also use an attribute selector: span[class="tag"], shown below*/
+.tag {
+    color: #023047;
+    font-size: 16px;
+}
+
+/* attribute selector that does the same thing as .tag -- shortcut: span.tag*/
+span[class="tag"] {
+    background-color: #ffb703;
+}
+
+/* descendant selector: all anchor tags (<a>) within the class "post" */
+.post a {
+    color: #023047;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* descendant selector: all anchor tags within the footer */
+footer a {
+    color: #fb8500;
+}
+
+/* adjacent selector: all buttons immediately preceded by an h1 */
+h2 + button {
+    font-size: 15px;
+}
+
+/* direct descendant selector: all anchor tags that are direct children of a footer -- this does not apply to the selector "footer a", because the other anchor tags are not direct descendants: they are inside a list element*/
+footer > a {
+    color: #023047;
+}
+
+/* attribute selector: only inputs of type password will be this color -- shortcut: input.password */
+input[type="password"] {
+    color: #fb8500;
+}
+
+/* :hover pseudo class: if you hover over a button in a post, it changes color
+if you hover over the login or signup buttons, they do not change color because the hover class is losing the battle to the id selector */
+.post button:hover {
+    color: white;
+    background-color: #023047;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+/* a class selector (.post) with an element selector (button) with the descendant combinator, with the :active pseudo-class -- when a button in a post is activated, its background-color changes to orange */
+.post button:active {
+    background-color: #fb8500;
+}
+
+/* every 2 posts will have this background-color */
+.post:nth-of-type(2n) {
+    background-color: #7fb8d4;
+}
+
+/* ::first-letter pseudo element: every first letter of h2 will be changed */
+h2::first-letter {
+    font-size: 30px;
+}
+
+p::first-line {
+    color: purple;
+}
+
+/* ::selection pseudo-element: highlighted text in a paragraph will be changed */
+p::selection {
+    background-color: #fcbf49;
+}
+
+/* :hover pseudo class: if you hover over a button in a post, it changes color
+if you hover over the login or signup buttons, they do not change color because the hover class is losing the battle to the id selector */
+.post button:hover {
+    color: white;
+    background-color: #023047;
+}
+
+/* both this, the obove selector, and the #signup selector change button color when hovering, but #signup is more specific than .post button:hover, which is more specific than button:hover. so, only the login button, which is under neighter #signup nor .post, will change color */
+button:hover {
+    background-color: green;
+}

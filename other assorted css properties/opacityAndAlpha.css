@@ -1,0 +1,20 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+/* rgba will not change the see-throughness of everything wiithin the id, but opacity will */
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.7);
+    /* in rgba, alpha is the last number from 0 to 1. in hex, alpha is the last two characters from 00 to FF */
+}
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.5;
+}
